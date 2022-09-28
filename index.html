@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>eneter a percenetege :</h3>
+
+    <form onsubmit="dosum();return false">
+
+        num1:<input id="num1" type="number"><b></b>
+        <button type="submit">enter</button>
+    </form>
+    <h3 id="result"> </h3>
+    <script>
+        function dosum() {
+             
+
+            let firstnumber = Number(document.querySelector("#num1").value);
+            let grade;
+            if (firstnumber >= 80) {
+                grade ="A+"; 
+                console.log(grade); 
+            }
+            
+            else if (firstnumber  >= 70 && firstnumber <= 79) {
+                grade = "A";
+                console.log(grade); 
+
+            }
+            else if (firstnumber  >= 60 && firstnumber <= 69) {
+                grade = "B";
+                console.log(grade); 
+            }
+            else if (firstnumber  >= 50 && firstnumber <= 59) {
+                grade = "C";
+                console.log(grade); 
+            }
+            else if (firstnumber < 49) {
+                grade = "you are fail";
+                console.log(grade); 
+            }
+
+            document.querySelector("#result").innerHTML = grade;
+        } 
+    </script>
+
+</body>
+
+</html>
